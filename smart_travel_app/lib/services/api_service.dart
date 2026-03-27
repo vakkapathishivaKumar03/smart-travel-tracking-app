@@ -23,7 +23,7 @@ class ApiService {
 
   static const Duration _requestTimeout = Duration(seconds: 12);
 
-  static bool demoMode = true;
+  static bool demoMode = const bool.fromEnvironment('DEMO_MODE', defaultValue: false);
 
   static final List<Map<String, dynamic>> _demoExpenses = [
     {'id': 1, 'amount': 1450.0, 'category': 'Hotel'},

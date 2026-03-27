@@ -1,0 +1,7 @@
+{
+  "name": "smart-travel-tracking-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "bash ./vercel-install.sh && bash ./vercel-build.sh"
+  }
+}

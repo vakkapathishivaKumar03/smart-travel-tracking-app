@@ -12,7 +12,10 @@ from twilio.rest import Client
 load_dotenv()
 
 # Optional: Load from environment variables
-SECRET_KEY = os.getenv("JWT_SECRET_KEY", "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7")
+SECRET_KEY = os.getenv("JWT_SECRET_KEY")
+if not SECRET_KEY:
+    print("[WARNING] JWT_SECRET_KEY is not set. Using a fallback key for development only. Do NOT use this in production.")
+    SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24 * 7  # 7 days
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
