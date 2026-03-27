@@ -2,6 +2,6 @@
   "name": "smart-travel-tracking-app",
   "version": "1.0.0",
   "scripts": {
-    "build": "bash ./vercel-install.sh && bash ./vercel-build.sh"
+    "build": "bash ./vercel-install.sh && bash ./vercel-build.sh && rm -rf public && cp -r smart_travel_app/build/web public"
   }
 }
