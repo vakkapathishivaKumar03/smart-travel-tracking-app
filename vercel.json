@@ -1,5 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "bash ./vercel-install.sh",
+  "buildCommand": "bash ./vercel-build.sh",
   "outputDirectory": "smart_travel_app/build/web",
   "rewrites": [
     {
