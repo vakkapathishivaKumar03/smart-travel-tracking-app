@@ -1,0 +1,57 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "bash ./vercel-install.sh",
+  "buildCommand": "bash ./vercel-build.sh",
+  "outputDirectory": "smart_travel_app/build/web",
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/agents/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/tracking/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/uploads/:path*",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/openapi.json",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/docs",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/sync-trips",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/sync-agent",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/api/index",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/redoc",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "TravelPilot AI (Chrome)",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome",
+      "program": "smart_travel_app/lib/main.dart",
+      "toolArgs": [
+        "--web-renderer",
+        "html"
+      ]
+    }
+  ]
+}
