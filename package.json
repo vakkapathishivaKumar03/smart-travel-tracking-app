@@ -1,7 +1,0 @@
-{
-  "name": "smart-travel-tracking-app",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "echo 'Frontend is prebuilt and stored in public folder.'"
-  }
-}
